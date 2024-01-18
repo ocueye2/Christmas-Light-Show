@@ -1,0 +1,284 @@
+alias: Music lights
+description: ""
+trigger:
+  - platform: time
+    at: "19:00:00"
+  - platform: time
+    at: "19:30:00"
+  - platform: time
+    at: "20:00:00"
+  - platform: time
+    at: "20:30:00"
+  - platform: time
+    at: "21:00:00"
+  - platform: time
+    at: "21:30:00"
+  - platform: time
+    at: "22:00:00"
+  - platform: time
+    at: "18:30:00"
+  - platform: time
+    at: "18:00:00"
+condition: []
+action:
+  - device_id: 9f41e917d8e85bc3c50ce35cd60302ab
+    domain: mobile_app
+    type: notify
+    title: title
+    message: message
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 1
+      milliseconds: 500
+  - service: script.all_off
+    data: {}
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 1
+      milliseconds: 0
+  - repeat:
+      count: 8
+      sequence:
+        - service: script.bushes_swipe
+          data: {}
+        - delay:
+            hours: 0
+            minutes: 0
+            seconds: 0
+            milliseconds: 100
+  - repeat:
+      count: 13
+      sequence:
+        - parallel:
+            - service: script.bushes_swipe
+              data: {}
+            - service: script.tree_twinkle
+              data: {}
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 6
+      milliseconds: 0
+  - repeat:
+      count: 6
+      sequence:
+        - service: script.all_on
+          data: {}
+        - delay:
+            hours: 0
+            minutes: 0
+            seconds: 0
+            milliseconds: 500
+        - service: script.all_off
+          data: {}
+        - delay:
+            hours: 0
+            minutes: 0
+            seconds: 0
+            milliseconds: 500
+  - repeat:
+      count: 3
+      sequence:
+        - service: script.flash_3
+          data: {}
+        - service: script.flash_1
+          data: {}
+        - service: script.flash_2
+          data: {}
+  - repeat:
+      count: 4
+      sequence:
+        - service: script.bass
+          data: {}
+        - delay:
+            hours: 0
+            minutes: 0
+            seconds: 0
+            milliseconds: 200
+  - repeat:
+      count: 3
+      sequence:
+        - service: script.flash_3
+          data: {}
+        - service: script.flash_1
+          data: {}
+        - service: script.flash_2
+          data: {}
+  - repeat:
+      count: 2
+      sequence:
+        - service: script.bass
+          data: {}
+        - delay:
+            hours: 0
+            minutes: 0
+            seconds: 0
+            milliseconds: 200
+  - repeat:
+      count: 6
+      sequence:
+        - service: script.full_staircase_moving_left
+          data: {}
+        - service: script.all_off
+          data: {}
+  - repeat:
+      count: 7
+      sequence:
+        - service: script.1701904928215
+          data: {}
+        - delay:
+            hours: 0
+            minutes: 0
+            seconds: 0
+            milliseconds: 50
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 500
+  - repeat:
+      count: 4
+      sequence:
+        - service: script.staircase_moving_left
+          data: {}
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 500
+  - repeat:
+      count: 2
+      sequence:
+        - service: script.staircase_moving_left
+          data: {}
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 500
+  - repeat:
+      count: 2
+      sequence:
+        - service: script.staircase_moving_left
+          data: {}
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 500
+  - repeat:
+      count: 4
+      sequence:
+        - service: script.staircase_moving_left
+          data: {}
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 1
+      milliseconds: 0
+  - repeat:
+      count: 10
+      sequence:
+        - service: script.flash_3
+          data: {}
+        - service: script.flash_1
+          data: {}
+        - service: script.flash_2
+          data: {}
+        - service: script.flash_1
+          data: {}
+        - service: script.flash_2
+          data: {}
+        - service: script.flash_3
+          data: {}
+  - repeat:
+      count: 5
+      sequence:
+        - service: script.bass
+          data: {}
+        - delay:
+            hours: 0
+            minutes: 0
+            seconds: 0
+            milliseconds: 200
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 100
+  - repeat:
+      count: 6
+      sequence:
+        - service: script.tree_twinkle
+          data: {}
+  - repeat:
+      count: 6
+      sequence:
+        - service: script.bushes_swipe
+          data: {}
+        - delay:
+            hours: 0
+            minutes: 0
+            seconds: 0
+            milliseconds: 100
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 100
+  - repeat:
+      count: 9
+      sequence:
+        - service: script.full_staircase_moving_left
+          data: {}
+        - service: script.all_off
+          data: {}
+  - repeat:
+      count: 11
+      sequence:
+        - service: script.1701904928215
+          data: {}
+        - delay:
+            hours: 0
+            minutes: 0
+            seconds: 0
+            milliseconds: 50
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 100
+  - repeat:
+      count: 4
+      sequence:
+        - service: script.full_staircase_moving_left
+          data: {}
+        - service: script.all_off
+          data: {}
+  - repeat:
+      count: 10
+      sequence:
+        - service: script.all_on
+          data: {}
+        - delay:
+            hours: 0
+            minutes: 0
+            seconds: 0
+            milliseconds: 500
+        - service: script.all_off
+          data: {}
+        - delay:
+            hours: 0
+            minutes: 0
+            seconds: 0
+            milliseconds: 500
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 10
+      milliseconds: 0
+  - service: script.all_on
+    data: {}
+mode: single

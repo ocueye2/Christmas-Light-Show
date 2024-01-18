@@ -1,0 +1,34 @@
+alias: Bass
+sequence:
+  - parallel:
+      - type: turn_on
+        device_id: ef1e703e80983cabd5feb91d525f8f8d
+        entity_id: 5c044d8e589c80ef08be87c7da70cf92
+        domain: switch
+      - type: turn_on
+        device_id: ef1e703e80983cabd5feb91d525f8f8d
+        entity_id: b28d6b9f4ebd76e99934296a27c4fe34
+        domain: switch
+      - type: turn_on
+        device_id: 060c3497f95452321752ea45b7ebe553
+        entity_id: 372327386a0659f03c34eba21f65a835
+        domain: switch
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 500
+  - parallel:
+      - type: turn_off
+        device_id: ef1e703e80983cabd5feb91d525f8f8d
+        entity_id: 5c044d8e589c80ef08be87c7da70cf92
+        domain: switch
+      - type: turn_off
+        device_id: ef1e703e80983cabd5feb91d525f8f8d
+        entity_id: b28d6b9f4ebd76e99934296a27c4fe34
+        domain: switch
+      - type: turn_off
+        device_id: 060c3497f95452321752ea45b7ebe553
+        entity_id: 372327386a0659f03c34eba21f65a835
+        domain: switch
+mode: single

@@ -1,0 +1,16 @@
+alias: Flash 1
+sequence:
+  - type: turn_on
+    device_id: 060c3497f95452321752ea45b7ebe553
+    entity_id: eabbfc688b5d7d2feffa39d9ced95e14
+    domain: switch
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 100
+  - type: turn_off
+    device_id: 060c3497f95452321752ea45b7ebe553
+    entity_id: eabbfc688b5d7d2feffa39d9ced95e14
+    domain: switch
+mode: single
